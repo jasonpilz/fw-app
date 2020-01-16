@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -e
+
+docker-compose up -d db
+docker-compose build --force-rm
+
+docker-compose run --rm app bundle exec rails db:create
+docker-compose up -d
