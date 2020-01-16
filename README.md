@@ -1,24 +1,23 @@
-# README
+# Docker Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> Bootstrapped Rails application running in docker
 
-Things you may want to cover:
+## Versions
 
-* Ruby version
+* Ruby 2.6.3
+* Rails 6.0.2
+* Postgresql 9.6
 
-* System dependencies
+## Usage
 
-* Configuration
+Run`bin/start` from the root directory. This will cause the following actions:
+1. Bring up the postgres database.
+2. Build the application docker image.
+3. Create the default databases for development and test.
+4. Launch the rails app/server.
 
-* Database creation
+Visiting `localhost:3000` should give you the default Rails landing page
 
-* Database initialization
+## Prerequisites
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* [Docker](https://www.docker.com/) running locally.
